@@ -20,12 +20,12 @@ const AreaLogin = styled.View`
     align-self: center;
     border: 1px solid #fff;
     border-radius: 20px;
-    width: 270px;
-    height: 250px;
-    justify-content: center;
+    width: 290px;
+    height: 290px;
+    justify-content: space-around;
     align-items: center;
     background-color:#fff;
-    align-content:space-between;
+    
 `;
 
 const Titulo = styled.Text`
@@ -54,13 +54,16 @@ const InputSenha = styled.TextInput`
     background-color:#eee;
 `;
 
-const Botao = styled.Button`
+const BtnEntrar = styled.Button`
 `;
 
-const Separator = styled.View`
-    marginVertical: 8px;
-    borderBottomColor: #737373;
-    borderBottomWidth: 100px;
+const Separador = styled.View`
+    width: 180px;
+    border: 1px solid #eee;
+`;
+
+const BtnCadastrar = styled.Text`
+    color: #ccc;
 `;
 
 const Screen = (props) => {
@@ -71,13 +74,21 @@ const Screen = (props) => {
         props.navigation.navigate('Home', {nome});
     }
 
+    const cadastrar = () => {
+        props.navigation.navigate('CadastroUser');
+    }
+
     return (
         <Page>
             <AreaLogin>
                 <Titulo>Bem vindo ao Personal Fit</Titulo>
                 <InputLogin placeholder='Login' value={nome} onChangeText={e=>setNome(e)} />
                 <InputSenha placeholder='Senha'/>
-                <Botao title='Entrar' onPress={fazerLogin} />
+                <BtnEntrar title='Entrar' onPress={fazerLogin} />
+                <Separador></Separador>
+                
+                <BtnCadastrar onPress={cadastrar}> Cadastre-se </BtnCadastrar>
+                
 
             </AreaLogin>
         </Page>
@@ -87,7 +98,7 @@ const Screen = (props) => {
 
 Screen.navigationOptions = () =>{
     return{
-        title:'Login'
+        header: null
     };
 };
 
