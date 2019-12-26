@@ -7,14 +7,6 @@ const Page = styled.SafeAreaView`
     justify-content:center;
 `;
 
-/*const Quadro = styled.View`
-    align-self:flex-start;
-    width: 100%;
-    height: 250px;
-    border-radius: 25px;
-    background-color:#7b70e6;
-`;*/
-
 const AreaLogin = styled.View`
     flex-direction: column;
     align-self: center;
@@ -29,6 +21,7 @@ const AreaLogin = styled.View`
 `;
 
 const Titulo = styled.Text`
+    padding-top:20px;
     padding-bottom: 20px;
     font-size: 20px;
 `;
@@ -95,11 +88,5 @@ const Screen = (props) => {
 
     );
 }
-
-Screen.navigationOptions = () =>{
-    return{
-        header: null
-    };
-};
 
 export default Screen;

@@ -1,9 +1,14 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import Login from '../screens/Login';
+import Inicio from '../screens/Inicio';
 import Home from '../screens/Home';
+import Login from '../screens/Login';
 import CadastroUser from '../screens/CadastroUser';
 
 const MainNavigator = createStackNavigator({
+    Inicio:{
+        screen:Inicio,
+        headerMode: 'none'
+    },
     Login:{
         screen:Login,
         headerMode: 'none'
@@ -23,7 +28,7 @@ const MainNavigator = createStackNavigator({
         },
         headerTitleContainerStyle:{
             alignContent:'center',
-            alignItems:'center'
+            alignItems:'center',
         }
     }
 });
