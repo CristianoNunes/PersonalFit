@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/native';
 
 const Page = styled.SafeAreaView`
@@ -84,34 +84,20 @@ const AreaSocial = styled.View`
     padding-bottom: 10px;
 `;
 
-const BtnFacebook = styled.TouchableHighlight`
+const BtnSocial = styled.TouchableHighlight`
     justify-content: center;
     align-items: center;
     width:35px;
     height: 35px;
     border-radius: 5px;
-    background-color: blue;
 `;
 
-const BtnGmail = styled.TouchableHighlight`
-    justify-content: center;
-    align-items: center;
-    width:35px;
-    height: 35px;
-    border-radius: 5px;
-    background-color: red;
+const ImgBtnSocial = styled.Image`
+    width:100%;
+    height:100%;
 `;
-
-const TitleBtnSocial = styled.Text`
-    font-size: 23px;
-    color: white;
-    font-weight: bold;
-`;
-
 
 const Screen = (props) => {
-
-    const [nome, setNome] = useState('');
 
     const fazerLogin = () => {
         props.navigation.navigate('Login');
@@ -126,27 +112,26 @@ const Screen = (props) => {
             <AreaLogin>
                 <Titulo>Bem vindo ao Personal Fit</Titulo>
                 <BtnEntrar onPress={fazerLogin}>
-                    <TitleBtnEntrar>Entrar</TitleBtnEntrar>
+                    <TitleBtnEntrar> Entrar </TitleBtnEntrar>
                 </BtnEntrar>
-                <BtnCadastrar>
-                    <TitleBtnCadastrar onPress={cadastrar}>Cadastre-se</TitleBtnCadastrar>
+                <BtnCadastrar onPress={cadastrar}>
+                    <TitleBtnCadastrar> Cadastre-se </TitleBtnCadastrar>
                 </BtnCadastrar>
                 <AreaSeparador>
                     <Separador></Separador>
-                    <TextSeparador>Ou entre usando</TextSeparador>
+                        <TextSeparador>Ou entre usando</TextSeparador>
                     <Separador></Separador>
                 </AreaSeparador>
                 <AreaSocial>
-                    <BtnFacebook>
-                        <TitleBtnSocial>f</TitleBtnSocial>
-                    </BtnFacebook>
-                    <BtnGmail>
-                        <TitleBtnSocial>g</TitleBtnSocial>
-                    </BtnGmail>
+                    <BtnSocial >
+                        <ImgBtnSocial source={require('../../assets/icon-facebook.png')} />
+                    </BtnSocial>
+                    <BtnSocial>
+                        <ImgBtnSocial source={require('../../assets/icon-google.png')} />
+                    </BtnSocial>
                 </AreaSocial>
             </AreaLogin>
         </Page>
-
     );
 }
 

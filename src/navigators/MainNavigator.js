@@ -19,7 +19,7 @@ const MainNavigator = createStackNavigator({
     CadastroUser:{
         screen:CadastroUser
     }
-},{
+}, {
     defaultNavigationOptions:{
         headerBackTitle:' ',
         headerTitleStyle:{

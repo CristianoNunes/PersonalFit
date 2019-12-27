@@ -24,7 +24,7 @@ const Screen = (props) => {
 Screen.navigationOptions = () =>{
     return{
         title:'Home'
-    };
+    }
 };
 
 export default Screen;
