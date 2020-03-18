@@ -28,35 +28,63 @@ const Titulo = styled.Text`
 
 const InputLogin = styled.TextInput`
     font-size: 15px;
-    border: 1px solid #eee;
+    border: 1px solid #7b70e6;
     width: 200px;
     height: 50px;
     border-radius: 25px;
     padding: 15px;
-    background-color:#eee;
+    background-color: #fff;
 `;
 
 const InputSenha = styled.TextInput`
     padding-top:10px;
     font-size: 15px;
+    border: 1px solid #7b70e6;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 15px;
+    background-color:#fff;
+`;
+
+const BtnEntrar = styled.TouchableHighlight`
+    justify-content: center;
+    align-items: center;
     border: 1px solid #eee;
     width: 200px;
     height: 50px;
     border-radius: 25px;
     padding: 15px;
-    background-color:#eee;
+    background-color:#7b70e6;
 `;
 
-const BtnEntrar = styled.Button`
+const TitleBtnEntrar = styled.Text`
+    font-size: 15px;
+    color:#fff;
+`;
+
+const AreaSeparador = styled.View`
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 `;
 
 const Separador = styled.View`
-    width: 180px;
-    border: 1px solid #eee;
+    width: 80px;
+    height: 1px;
+    background-color: #ccc;
+`;
+
+const TextSeparador = styled.Text`
+    color: #ccc;
+    padding-right:5px;
+    padding-left:5px;
 `;
 
 const BtnCadastrar = styled.Text`
+    padding-bottom:5px;
     color: #ccc;
+    font-weight: bold;
 `;
 
 const Screen = (props) => {
@@ -77,8 +105,15 @@ const Screen = (props) => {
                 <Titulo>Bem vindo ao Personal Fit</Titulo>
                 <InputLogin placeholder='Login' value={nome} onChangeText={e=>setNome(e)} />
                 <InputSenha placeholder='Senha'/>
-                <BtnEntrar title='Entrar' onPress={fazerLogin} />
-                <Separador></Separador>
+                <BtnEntrar onPress={fazerLogin}>
+                    <TitleBtnEntrar>Entrar</TitleBtnEntrar>
+                </BtnEntrar>
+                <AreaSeparador>
+                    <Separador></Separador>
+                        <TextSeparador>Ou</TextSeparador>
+                    <Separador></Separador>
+                </AreaSeparador>
+                
                 
                 <BtnCadastrar onPress={cadastrar}> Cadastre-se </BtnCadastrar>
                 

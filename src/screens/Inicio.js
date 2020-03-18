@@ -16,8 +16,7 @@ const AreaLogin = styled.View`
     height: 300px;
     justify-content: space-around;
     align-items: center;
-    background-color:#fff;
-    
+    background-color:#fff; 
 `;
 
 const Titulo = styled.Text`
@@ -119,7 +118,7 @@ const Screen = (props) => {
                 </BtnCadastrar>
                 <AreaSeparador>
                     <Separador></Separador>
-                        <TextSeparador>Ou entre usando</TextSeparador>
+                        <TextSeparador>Ou conecte-se usando</TextSeparador>
                     <Separador></Separador>
                 </AreaSeparador>
                 <AreaSocial>
